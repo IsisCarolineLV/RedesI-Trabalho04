@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.QuadCurve?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="panePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="878.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControllerTela">
+   <children>
+      <ImageView fx:id="imagemFundo" fitHeight="492.0" fitWidth="900.0" layoutX="82.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../imagens/tela1.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="botaoEnviar" defaultButton="true" layoutX="90.0" layoutY="419.0" mnemonicParsing="false" onAction="#clicouEnviar" onMouseEntered="#destacarBotao" onMouseExited="#voltaBotao" prefHeight="35.0" prefWidth="106.0" style="-fx-background-color: #7cad92;" text="Enviar" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold Italic" size="18.0" />
+         </font></Button>
+      <Button fx:id="botaoSair" layoutX="831.0" mnemonicParsing="false" onAction="#clicouSair" onMouseEntered="#destacarBotao" onMouseExited="#voltaBotao" opacity="0.0" prefHeight="61.0" prefWidth="46.0" text="Sair" />
+      <Button fx:id="botaoVoltar" layoutY="5.0" mnemonicParsing="false" onAction="#clicouVoltar" onMouseEntered="#destacarBotao" onMouseExited="#voltaBotao" opacity="0.0" prefHeight="50.0" prefWidth="46.0" text="Voltar" />
+      <TextArea fx:id="campoDeTexto" layoutX="58.0" layoutY="246.0" prefHeight="103.0" prefWidth="170.0" promptText="Digite sua mensagem aqui" style="-fx-background-color: #fddaff;" wrapText="true">
+         <font>
+            <Font name="Candara Italic" size="18.0" />
+         </font>
+      </TextArea>
+      <ImageView fx:id="imagemCanetas" fitHeight="209.0" fitWidth="142.0" layoutX="775.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/botaoEscrever.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagemImpressora" fitHeight="255.0" fitWidth="311.0" layoutX="573.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/impressora/1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="237.0" layoutY="5.0" prefHeight="62.0" prefWidth="142.0" text="TAXA DE ERRO: " textFill="WHITE">
+         <font>
+            <Font name="Candara Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelERRO" layoutX="364.0" layoutY="11.0" prefHeight="50.0" prefWidth="63.0" text="0%" textFill="WHITE">
+         <font>
+            <Font name="Bookman Old Style Bold" size="17.0" />
+         </font>
+      </Label>
+      <Slider fx:id="sliderErro" blockIncrement="1.0" layoutX="196.0" layoutY="24.0" max="10.0" prefHeight="62.0" prefWidth="253.0" />
+      <Label fx:id="labelCliqueCanetas" layoutX="678.0" layoutY="205.0" prefHeight="50.0" prefWidth="132.0" text="Clique nas canetas" textFill="#856691">
+         <font>
+            <Font name="Colonna MT" size="16.0" />
+         </font>
+      </Label>
+      <QuadCurve fx:id="seta1" controlX="-13.99993896484375" controlY="-6.600006103515625" endX="19.60003662109375" endY="3.79998779296875" fill="#f7f7f700" layoutX="791.0" layoutY="273.0" startX="-13.99993896484375" startY="-29.800018310546875" stroke="#856691" strokeType="INSIDE" />
+      <QuadCurve fx:id="seta2" controlX="1.60003662109375" controlY="-3.000030517578125" endX="16.00006103515625" endY="-3.000030517578125" fill="#f7f7f700" layoutX="801.0" layoutY="283.0" startX="-9.60003662109375" startY="-9.4000244140625" stroke="#856691" strokeType="INSIDE" />
+      <QuadCurve fx:id="seta3" controlX="-0.99993896484375" controlY="-29.000030517578125" endX="5.20001220703125" endY="-15.4000244140625" fill="#f7f7f700" layoutX="811.0" layoutY="293.0" startX="-9.20001220703125" startY="-29.000030517578125" stroke="#856691" strokeType="INSIDE" />
+      <ProgressBar fx:id="barraDeProgresso" layoutX="355.0" layoutY="248.0" prefWidth="200.0" progress="0.0" style="-fx-border-color: transparent;" visible="false" />
+      <ImageView fx:id="imagemBalaoErro" fitHeight="62.0" fitWidth="73.0" layoutX="628.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imagens/balao/avisoErro.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagemBalaoErroPC" fitHeight="62.0" fitWidth="73.0" layoutX="228.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true" scaleX="-1.0" visible="false">
+         <image>
+            <Image url="@../imagens/balao/avisoErro.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="botaoVer" disable="true" layoutX="649.0" layoutY="256.0" mnemonicParsing="false" onAction="#clicouVerFolha" onMouseEntered="#destacarBotao" onMouseExited="#voltaBotao" opacity="0.0" prefHeight="170.0" prefWidth="142.0" text="verFolha" />
+      <Button fx:id="botaoEscrever" layoutX="810.0" layoutY="238.0" mnemonicParsing="false" onAction="#clicouEscrever" onMouseEntered="#destacarBotao" onMouseExited="#voltaBotao" opacity="0.0" prefHeight="118.0" prefWidth="63.0" text="escrever" />
+      <AnchorPane fx:id="paneSinal" layoutX="279.0" layoutY="274.0" prefHeight="83.0" prefWidth="368.0">
+         <children>
+            <ImageView fx:id="imagemSinal1" fitHeight="62.0" fitWidth="22.0" layoutX="12.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal2" fitHeight="62.0" fitWidth="22.0" layoutX="33.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal3" fitHeight="62.0" fitWidth="22.0" layoutX="55.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal4" fitHeight="62.0" fitWidth="22.0" layoutX="76.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal5" fitHeight="62.0" fitWidth="22.0" layoutX="97.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal6" fitHeight="62.0" fitWidth="22.0" layoutX="119.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal7" fitHeight="62.0" fitWidth="22.0" layoutX="140.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal8" fitHeight="62.0" fitWidth="22.0" layoutX="161.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal9" fitHeight="62.0" fitWidth="22.0" layoutX="183.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal10" fitHeight="62.0" fitWidth="22.0" layoutX="204.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal11" fitHeight="62.0" fitWidth="22.0" layoutX="225.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal12" fitHeight="62.0" fitWidth="22.0" layoutX="247.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal13" fitHeight="62.0" fitWidth="22.0" layoutX="268.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal14" fitHeight="62.0" fitWidth="22.0" layoutX="289.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal15" fitHeight="62.0" fitWidth="22.0" layoutX="311.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagemSinal16" fitHeight="62.0" fitWidth="22.0" layoutX="332.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <AnchorPane fx:id="paneSinal1" layoutX="-1.0" layoutY="2.0" prefHeight="83.0" prefWidth="368.0">
+               <children>
+                  <ImageView fx:id="imagemTransicao1" fitHeight="62.0" fitWidth="22.0" layoutX="24.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagemTransicao2" fitHeight="62.0" fitWidth="22.0" layoutX="46.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagemTransicao3" fitHeight="62.0" fitWidth="22.0" layoutX="68.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagemTransicao4" fitHeight="62.0" fitWidth="22.0" layoutX="90.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagemTransicao5" fitHeight="62.0" fitWidth="22.0" layoutX="111.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagemTransicao6" fitHeight="62.0" fitWidth="22.0" layoutX="131.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagemTransicao7" fitHeight="62.0" fitWidth="22.0" layoutX="153.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagemTransicao8" fitHeight="62.0" fitWidth="22.0" layoutX="174.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagemTransicao9" fitHeight="62.0" fitWidth="22.0" layoutX="195.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagemTransicao10" fitHeight="62.0" fitWidth="22.0" layoutX="216.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagemTransicao11" fitHeight="62.0" fitWidth="22.0" layoutX="237.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagemTransicao12" fitHeight="62.0" fitWidth="22.0" layoutX="258.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagemTransicao13" fitHeight="62.0" fitWidth="22.0" layoutX="280.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagemTransicao14" fitHeight="62.0" fitWidth="22.0" layoutX="301.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagemTransicao15" fitHeight="62.0" fitWidth="22.0" layoutX="323.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneFolha" layoutX="547.0" layoutY="77.0" prefHeight="390.0" prefWidth="346.0" visible="false">
+         <children>
+            <ImageView fx:id="imagemFolha" fitHeight="339.0" fitWidth="254.0" layoutX="36.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/folha.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="textoErros" fill="#b0000031" layoutX="23.0" layoutY="195.0" rotate="-39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERRO" visible="false" wrappingWidth="289.60000000000014">
+                     <font>
+                        <Font name="Bookman Old Style" size="89.0" />
+                     </font>
+                  </Text>
+            <Text fx:id="textoDecodificado" fill="#736c2a" layoutX="47.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="230.13671875">
+               <font>
+                  <Font name="Bookman Old Style" size="21.0" />
+               </font>
+            </Text>
+            <Button fx:id="botaoSairFolha" layoutX="36.0" layoutY="14.0" mnemonicParsing="false" onAction="#clicouSairFolha" onMouseEntered="#destacarBotao" onMouseExited="#voltaBotao" opacity="0.0" prefHeight="35.0" prefWidth="46.0" text="Sair" />
+            <TextArea fx:id="campoDeTexto2" layoutX="39.0" layoutY="51.0" prefHeight="294.0" prefWidth="246.0" promptText="Digite sua mensagem aqui" wrapText="true">
+               <font>
+                  <Font name="Bookman Old Style" size="21.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="botaoScan" defaultButton="true" layoutX="225.0" layoutY="338.0" mnemonicParsing="false" onAction="#clicouScan" onMouseEntered="#destacarBotao" onMouseExited="#voltaBotao" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #7cad92;" text="Scan" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold Italic" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneMenu" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="884.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imagemMenu" fitHeight="514.0" fitWidth="884.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="-4.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../imagens/telaMenu.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelCodificacao" layoutX="251.0" layoutY="241.0" prefHeight="62.0" prefWidth="142.0" text="Tipo de Codificacao" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Corbel Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelEnquadramento" layoutX="242.0" layoutY="326.0" prefHeight="62.0" prefWidth="158.0" text="Tipo de Enquadramento" textAlignment="CENTER" textFill="#568153" textOverrun="WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font name="Corbel Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="botaoSairMenu" layoutX="837.0" mnemonicParsing="false" onAction="#clicouSair" onMouseEntered="#destacarBotao" onMouseExited="#voltaBotao" opacity="0.0" prefHeight="62.0" prefWidth="46.0" text="Sair" />
+            <Button fx:id="botaoIniciar" defaultButton="true" disable="true" layoutX="388.0" layoutY="414.0" mnemonicParsing="false" onAction="#clicouIniciar" onMouseEntered="#destacarBotao" onMouseExited="#voltaBotao" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #7cad92;" text="Iniciar" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="comboBox" layoutX="243.0" layoutY="247.0" opacity="0.0" prefHeight="50.0" prefWidth="158.0" promptText="Escolher codificacao" style="-fx-background-color: #7cad92;" />
+            <ComboBox fx:id="comboBoxEnquadramento" layoutX="242.0" layoutY="332.0" opacity="0.0" prefHeight="50.0" prefWidth="158.0" promptText="Escolher enquadramento" style="-fx-background-color: #7cad92;" />
+            <Label fx:id="labelControleErro" layoutX="456.0" layoutY="243.0" prefHeight="62.0" prefWidth="142.0" text="Tipo de Controle de Erro" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Corbel Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBoxControle" layoutX="447.0" layoutY="249.0" opacity="0.0" prefHeight="50.0" prefWidth="158.0" promptText="Escolher controle" style="-fx-background-color: #7cad92;" />
+            <Label fx:id="labelControleFluxo" layoutX="450.0" layoutY="326.0" prefHeight="62.0" prefWidth="142.0" text="Tipo de Controle de Fluxo" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Corbel Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBoxControleFluxo" layoutX="448.0" layoutY="332.0" opacity="0.0" prefHeight="50.0" prefWidth="158.0" promptText="Escolher controle de fluxo" style="-fx-background-color: #7cad92;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
