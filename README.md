@@ -3,7 +3,6 @@
 Este repositório contém a implementação do **Quarto Trabalho da matéria Redes I**.
 
 **Nota:** 75/100  
-**Observações:** Não foi uma boa ideia fazer o receptor ficar esperando o tempo de um quadro para decidir se para ou não de esperar, pode acabar facilmente entrando num loop
 
 **Professor:** Marlos Marques  
 **Semestre:** 2025.2
