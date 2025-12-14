@@ -14,21 +14,19 @@ Este repositório contém a implementação do **Quarto Trabalho da matéria Red
 
 Este trabalho é uma continuação do Terceiro Trabalho de Redes I.
 
-O objetivo é estender a comunicação implementada anteriormente, permitindo transmissão de dados em ambos os sentidos, com ênfase nos diferentes mecanismos de controle de fluxo, simulando um cenário de comunicação bidirecional completo.
+Permite a comunicação em ambos sentidos:  
 
-Foram implementados e explorados os seguintes tipos de controle de fluxo:
+* Sentido 1: computador → impressora (envia mensagem para ser impressa)
+
+* Sentido 2: impressora → computador (scanner envia texto para ser digitalizado)  
+
+E foram implementados e explorados os seguintes tipos de controle de fluxo:
 
 * Janela deslizante de 1 bit
 
 * Janela deslizante Go-Back-N
 
 * Janela deslizante com retransmissão seletiva
-
-Além disso, foram considerados dois sentidos de comunicação:
-
-* Sentido 1: computador → impressora (envia mensagem para ser impressa)
-
-* Sentido 2: impressora → computador (scanner envia texto para ser digitalizado)
 
 ---
 
